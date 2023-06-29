@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="./style(ver2.0).css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+    <nav id="top">
+        <ul>
+            <li><a
+                    href="https://www.bodybuilding.com/content/start-here-start-now-the-8-week-beginner-workout-plan.html">Workout</a>
+            </li>
+            <li><a href="https://www.gnc.com/">Supplements</a></li>
+            <li><a href="https://www.healthline.com/nutrition/most-weight-loss-friendly-foods">Food</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="title">
+            <h1 id="title-top">Calorie Calculator</h1>
+        </div>
+        <div class="weight-container">
+            <div class="weight-title">
+                <h2 id="metric-converter-title">Imperial to Metric Converter</h2>
+            </div>
+            <div class="converter-container">
+                <div class="h-w-input">
+                    <input type="number" id="lbs" name="imperial" class="metric-box">
+                    <label for="lbs" class="converter-font">lbs</label>
+                    <input type="number" id="inches" name="imperial" class="metric-box">
+                    <label for="inches" class="converter-font">inches</label>
+                </div>
+                <div class="h-w-output">
+                    <p id="lbs-2-kg" class="converter-font">kg</p>
+                    <p id="in-2-cm" class="converter-font">cm</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-convert">
+            <button id="convert-btn" onclick="convertToNormal()">Convert</button>
+        </div>
+        <div class="input-main-container">
+            <h2>Age</h2>
+            <input type="number" id="age" class="input-content">
+        </div>
+        <div class="input-main-container">
+            <h2 class="title-input">Gender</h2>
+            <div class="radio-dots">
+                <div class="dot-wrapper">
+                    <input type="radio" id="male" name="gender" value="Male" class="radio-dot">
+                    <label for="male">Male</label>
+                </div>
+                <div class="dot-wrapper">
+                    <input type="radio" id="female" name="gender" value="Female" class="radio-dot">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="input-main-container">
+            <h2>Height</h2>
+            <input type="number" id="height" placeholder="  (cm)" class="input-content">
+        </div>
+        <div class="input-main-container">
+            <h2>Weight</h2>
+            <input type="number" id="weight" class="input-content" placeholder="  (kg)">
+        </div>
+        <div class="input-main-container">
+            <h2>Activity</h2>
+            <select name="activity-level" id="active" class="input-content">
+                <option value="1.2">Sedentary</option>
+                <option value="1.375">Light</option>
+                <option value="1.55">Moderate</option>
+                <option value="1.725">Active</option>
+                <option value="1.9">Very Active</option>
+            </select>
+        </div>
+        <div class="button">
+            <button id="calc" onclick="findBMR()">Calculate</button>
+        </div>
+        <div class="results">
+            <div class="top-res">
+                <h2 id="eat-results">You want to eat...</h2>
+            </div>
+            <div class="bottom-res">
+                <p id="calories" class="macros">Calories</p>
+                <p id="carbs" class="macros">Carbs</p>
+                <p id="fat" class="macros">Fat</p>
+                <p id="protein" class="macros">Protein</p>
+            </div>
+        </div>
+        <div class="chart">
+            <canvas id="myChart" style="width:100%;max-width:1000px"></canvas>
+        </div>
+        <div class="helpful">
+            <h2 id="start">How to start?</h2>
+            <p id="starting">The best time to start was yesterday but the second best time to start is today!<br>
+                Beginning a new workout routine is not easy and requires deicipline. A lot of people confuse discipline
+                with
+                motivation. Motivation is great for getting you started but you need discipline in order to keep going
+                even when you dont want to.<br>Losing weight is a long process and requires sacrafice but the end
+                result is always worth it. </p>
+            <p id="links">For information on a workout split, good foods to eat, and supplementation visit the links
+                <a href="#top" id="top-link">above</a>
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
